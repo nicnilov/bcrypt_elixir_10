@@ -26,7 +26,7 @@ defmodule App.Worker do
   end
 
   def handle_info(:hash, state) do
-    Bcrypt.hash_pwd_salt("some_password", log_rounds: 4)
+    Argon2.hash_pwd_salt("some_password", t_cost: 1, m_cost: 8)
     |> IO.inspect
 
     # Repeat until crash

@@ -21,7 +21,7 @@ defmodule App.Mixfile do
 
   defp deps do
     [
-      {:bcrypt_elixir, path: "../bcrypt_elixir"}
+      {:argon2_elixir, "~> 1.3"}
     ]
   end
 end
